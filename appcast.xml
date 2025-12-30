@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>Peninsula Updates</title>
+        <description>Auto-updates for Peninsula - Interactive MacBook Pro notch app</description>
+        <language>en</language>
+        <link>https://github.com/sidkaria/Peninsula</link>
+
+        <!-- GitHub Actions will automatically insert new releases here -->
+    <item>
+        <title>Peninsula 1.0.1</title>
+        <pubDate>Tue, 30 Dec 2025 10:41:05 +0000</pubDate>
+        <sparkle:version>1.0.1</sparkle:version>
+        <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+        <description><![CDATA[
+            <h2>What's New in 1.0.1</h2>
+            <ul>
+                <li>See release notes on GitHub</li>
+            </ul>
+        ]]></description>
+        <enclosure
+            url="https://github.com/sidkaria/Peninsula/releases/download/v1.0.1/Peninsula.dmg"
+            sparkle:edSignature="sparkle:edSignature="3cHP7fCm2Nv4WhOZJWyDejA02uag4Fvg+x7EblDgXP1rHANit5pQjG1aeAr+OAjgaGE0qQcupodHtZhzn+dNAA==" length="4153496""
+            length="4153496"
+            type="application/octet-stream"
+        />
+    </item>
+        <item>
+            <title>Peninsula 1.0.0</title>
+            <pubDate>Tue, 30 Dec 2025 10:27:30 +0000</pubDate>
+            <sparkle:version>1.0.0</sparkle:version>
+            <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>What's New in 1.0.0</h2>
+                <ul>
+                    <li>See release notes on GitHub</li>
+                </ul>
+            ]]></description>
+            <enclosure
+                url="https://github.com/sidkaria/Peninsula/releases/download/v1.0.0/Peninsula.dmg"
+                sparkle:edSignature="hs+Fo1v2TLdX+2spmoUVwnYwfJ2aZdkA0YWrw1AqWJB20YFvOACMl3apTIZ/EgE8TcQDGHZSX6I9XgFAHUwOCg=="
+                length="4153567"
+                type="application/octet-stream"
+            />
+        </item>
+
+    </channel>
+</rss>
