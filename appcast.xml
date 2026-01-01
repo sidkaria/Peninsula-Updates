@@ -4,7 +4,7 @@
         <title>Peninsula Updates</title>
         <description>Auto-updates for Peninsula - Interactive MacBook Pro notch app</description>
         <language>en</language>
-        <link>https://github.com/sidkaria/Peninsula</link>
+        <link>https://getpeninsula.com</link>
 
         <!-- GitHub Actions will automatically insert new releases here -->
     <item>
@@ -20,8 +20,8 @@
             </ul>
         ]]></description>
         <enclosure
-            url="https://app.lemonsqueezy.com/download/0c9b0917-7226-4dc8-963e-380157bdf778?expires=1767175197&signature=3104b57b7273013b3cee22bea9448ce2114f1933f4fa406689512c5ee555f277"
-            sparkle:edSignature="sparkle:edSignature="GLBmz1Ur6knwa1zJXfuiHvrITfszLnl7RYWYaskC7CWBJi0B4jB5jsU5M6TK9w499YknWKczscBv29TCrZaaDA==" length="1349375""
+            url="https://github.com/sidkaria/Peninsula-Updates/releases/download/v1.0.4/Peninsula.dmg"
+            sparkle:edSignature="GLBmz1Ur6knwa1zJXfuiHvrITfszLnl7RYWYaskC7CWBJi0B4jB5jsU5M6TK9w499YknWKczscBv29TCrZaaDA=="
             length="1349375"
             type="application/octet-stream"
         />
@@ -39,7 +39,7 @@
             </ul>
         ]]></description>
         <enclosure
-            url="https://github.com/sidkaria/Peninsula/releases/download/v1.0.1/Peninsula.dmg"
+            url="https://github.com/sidkaria/Peninsula-Updates/releases/download/v1.0.1/Peninsula.dmg"
             sparkle:edSignature="3cHP7fCm2Nv4WhOZJWyDejA02uag4Fvg+x7EblDgXP1rHANit5pQjG1aeAr+OAjgaGE0qQcupodHtZhzn+dNAA=="
             length="4153496"
             type="application/octet-stream"
@@ -58,7 +58,7 @@
                 </ul>
             ]]></description>
             <enclosure
-                url="https://github.com/sidkaria/Peninsula/releases/download/v1.0.0/Peninsula.dmg"
+                url="https://github.com/sidkaria/Peninsula-Updates/releases/download/v1.0.0/Peninsula.dmg"
                 sparkle:edSignature="hs+Fo1v2TLdX+2spmoUVwnYwfJ2aZdkA0YWrw1AqWJB20YFvOACMl3apTIZ/EgE8TcQDGHZSX6I9XgFAHUwOCg=="
                 length="4153567"
                 type="application/octet-stream"
