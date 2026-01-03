@@ -3,64 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peninsula - Transform Your MacBook Pro Notch</title>
-    <meta name="description" content="Interactive MacBook Pro notch app with music controls, quick notes, clipboard history, and file management. $10 one-time purchase.">
+    <title>Peninsula - Transform Your MacBook Notch</title>
+    <meta name="description" content="Interactive MacBook notch app with music controls, quick notes, clipboard history, and file management. $10 one-time purchase.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Animated background gradient -->
+    <div class="gradient-bg"></div>
+
+    <!-- Notch visualization at top -->
+    <div class="notch-container">
+        <div id="notch" class="notch closed">
+            <div class="notch-content">
+                <div class="notch-pill">
+                    <span class="notch-icon">🎵</span>
+                    <span class="notch-text">Peninsula</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
-            <div class="logo">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="60" height="20" rx="10" fill="url(#gradient)"/>
+            <div class="logo-container">
+                <div class="logo-glow"></div>
+                <svg class="logo" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="80" height="26" rx="13" fill="url(#gradient)"/>
                     <defs>
-                        <linearGradient id="gradient" x1="0" y1="0" x2="60" y2="20" gradientUnits="userSpaceOnUse">
+                        <linearGradient id="gradient" x1="0" y1="0" x2="80" y2="26" gradientUnits="userSpaceOnUse">
                             <stop offset="0%" style="stop-color:#6B9FFF;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#B88FFF;stop-opacity:1" />
                             <stop offset="100%" style="stop-color:#FF8E8E;stop-opacity:1" />
                         </linearGradient>
                     </defs>
                 </svg>
             </div>
-            <h1>Peninsula</h1>
-            <p class="tagline">Transform your MacBook Pro notch into a powerful productivity tool</p>
 
-            <div class="cta-buttons">
-                <a href="https://github.com/sidkaria/Peninsula-Updates/releases/latest/download/Peninsula.dmg" class="btn btn-primary">
-                    Download Peninsula
+            <h1 class="hero-title">
+                <span class="word" style="--delay: 0s">Peninsula</span>
+            </h1>
+
+            <p class="tagline fade-in" style="--delay: 0.2s">
+                Transform your MacBook notch into a powerful productivity tool
+            </p>
+
+            <div class="cta-buttons fade-in" style="--delay: 0.4s">
+                <a href="https://github.com/sidkaria/Peninsula-Updates/releases/latest/download/Peninsula.dmg" class="btn btn-primary glass-card">
+                    <span class="btn-gradient"></span>
+                    <span class="btn-text">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 3V13M10 13L6 9M10 13L14 9M4 17H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Download Peninsula
+                    </span>
                 </a>
-                <a href="https://peninsula.lemonsqueezy.com/checkout/buy/a5aec603-c7fa-4745-b321-a73a72fdac85?media=0" class="btn btn-secondary">
-                    Buy License - $10
+                <a href="https://peninsula.lemonsqueezy.com/checkout/buy/a5aec603-c7fa-4745-b321-a73a72fdac85?media=0" class="btn btn-secondary glass-card">
+                    <span class="btn-text">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 7H16M4 7V15C4 15.5523 4.44772 16 5 16H15C15.5523 16 16 15.5523 16 15V7M4 7L6 4H14L16 7M10 10V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Buy License - $10
+                    </span>
                 </a>
             </div>
 
-            <p class="version">Latest version: <span id="latest-version">Loading...</span></p>
+            <p class="version fade-in" style="--delay: 0.6s">
+                Latest version: <span id="latest-version" class="version-number">Loading...</span>
+            </p>
         </header>
 
         <!-- Features Section -->
-        <section class="features">
-            <h2>Features</h2>
+        <section class="features fade-in" style="--delay: 0.8s">
+            <h2 class="section-title">Features</h2>
             <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎵</div>
+                <div class="feature-card glass-card" data-feature="music">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🎵</div>
+                    </div>
                     <h3>Music Control</h3>
-                    <p>Full playback controls, album art, and beautiful visualizations right in your notch.</p>
+                    <p>Full playback controls, album art, and beautiful waveform visualizations right in your notch.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
+                <div class="feature-card glass-card" data-feature="notes">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📝</div>
+                    </div>
                     <h3>Quick Notes</h3>
                     <p>Jot down thoughts instantly with persistent, searchable notes that sync across sessions.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
+                <div class="feature-card glass-card" data-feature="clipboard">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📋</div>
+                    </div>
                     <h3>Clipboard History</h3>
                     <p>Never lose copied content. Access your clipboard history with a single click.</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📁</div>
+                <div class="feature-card glass-card" data-feature="shelf">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📁</div>
+                    </div>
                     <h3>File Shelf</h3>
                     <p>Drag and drop files into your notch for quick access and management.</p>
                 </div>
@@ -68,117 +112,180 @@
         </section>
 
         <!-- Requirements Section -->
-        <section class="requirements">
-            <h2>Requirements</h2>
-            <ul>
-                <li>MacBook Pro with notch (14" or 16" 2021 or later)</li>
-                <li>macOS 13.0 Ventura or later</li>
-                <li>$10 one-time license (2 device activations included)</li>
-            </ul>
+        <section class="requirements fade-in" style="--delay: 1s">
+            <h2 class="section-title">Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card glass-card">
+                    <div class="requirement-icon">💻</div>
+                    <div class="requirement-text">
+                        <h4>Compatible Devices</h4>
+                        <p>MacBook Pro (14" or 16" 2021+) or MacBook Air (13" or 15" 2022+) with notch</p>
+                    </div>
+                </div>
+
+                <div class="requirement-card glass-card">
+                    <div class="requirement-icon">⚙️</div>
+                    <div class="requirement-text">
+                        <h4>Operating System</h4>
+                        <p>macOS 13.0 Ventura or later</p>
+                    </div>
+                </div>
+
+                <div class="requirement-card glass-card">
+                    <div class="requirement-icon">🎫</div>
+                    <div class="requirement-text">
+                        <h4>License</h4>
+                        <p>$10 one-time purchase (2 device activations included)</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Installation Instructions -->
-        <section class="installation">
-            <h2>Getting Started</h2>
+        <section class="installation fade-in" style="--delay: 1.2s">
+            <h2 class="section-title">Getting Started</h2>
             <div class="steps">
-                <div class="step">
+                <div class="step glass-card">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Download Peninsula</h3>
-                        <p>Click the download button above to get the latest version.</p>
+                        <p>Click the download button above to get the latest version. The DMG file is about 1.3 MB.</p>
                     </div>
                 </div>
 
-                <div class="step">
+                <div class="step glass-card">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Install the App</h3>
-                        <p>Open the DMG and drag Peninsula to your Applications folder. Right-click and select "Open" on first launch.</p>
+                        <p>Open the DMG and drag Peninsula to your Applications folder. Right-click and select "Open" on first launch to bypass Gatekeeper.</p>
                     </div>
                 </div>
 
-                <div class="step">
+                <div class="step glass-card">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Purchase & Activate</h3>
-                        <p>Buy your license for $10, then enter the license key when Peninsula launches.</p>
+                        <p>Buy your license for $10 via Lemon Squeezy, then enter the license key when Peninsula launches. You get 2 device activations.</p>
                     </div>
                 </div>
 
-                <div class="step">
+                <div class="step glass-card">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <h3>Enjoy!</h3>
-                        <p>Your notch is now a powerful productivity tool. Updates are automatic.</p>
+                        <p>Your notch is now a powerful productivity tool. Updates are checked automatically via Sparkle.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section class="faq">
-            <h2>Frequently Asked Questions</h2>
+        <section class="faq fade-in" style="--delay: 1.4s">
+            <h2 class="section-title">Frequently Asked Questions</h2>
 
-            <div class="faq-item">
-                <h3>Is there a free trial?</h3>
-                <p>No, Peninsula requires a license to use. We offer a simple $10 one-time purchase with no subscriptions.</p>
-            </div>
+            <div class="faq-list">
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Is there a free trial?</h3>
+                        <div class="faq-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, Peninsula requires a license to use. We offer a simple $10 one-time purchase with no subscriptions.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>How many devices can I use?</h3>
-                <p>Each license includes 2 device activations, perfect for personal and work Macs.</p>
-            </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>How many devices can I use?</h3>
+                        <div class="faq-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Each license includes 2 device activations, perfect for personal and work Macs.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>Do I need an Apple Developer account?</h3>
-                <p>No! Peninsula works without any Apple account. Just download, install, and activate.</p>
-            </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Do I need an Apple Developer account?</h3>
+                        <div class="faq-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No! Peninsula works without any Apple account. Just download, install, and activate with your license key.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>Will it work on my MacBook Air?</h3>
-                <p>Peninsula is designed for MacBook Pro models with a notch (14" or 16" from 2021 onwards).</p>
-            </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Will it work on my MacBook Air?</h3>
+                        <div class="faq-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Peninsula works on all MacBooks with a notch, including MacBook Air (13" or 15" 2022+) and MacBook Pro (14" or 16" 2021+).</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>How do updates work?</h3>
-                <p>Peninsula checks for updates automatically using Sparkle. You'll be notified when new versions are available.</p>
-            </div>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>How do updates work?</h3>
+                        <div class="faq-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Peninsula checks for updates automatically using Sparkle. You'll be notified when new versions are available, and updates install seamlessly.</p>
+                    </div>
+                </div>
 
-            <div class="faq-item">
-                <h3>Can I get a refund?</h3>
-                <p>Contact support@getpeninsula.com within 14 days for refund requests.</p>
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Can I get a refund?</h3>
+                        <div class="faq-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contact support@getpeninsula.com within 14 days for refund requests.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 Peninsula. All rights reserved.</p>
-            <p>
-                <a href="mailto:support@getpeninsula.com">Support</a> •
-                <a href="https://github.com/sidkaria/Peninsula-Updates">Updates</a> •
-                <a href="appcast.xml">Release Feed</a>
-            </p>
-            <p class="legal">Secure payments processed by Lemon Squeezy</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Peninsula. All rights reserved.</p>
+                <p class="footer-links">
+                    <a href="mailto:support@getpeninsula.com">Support</a>
+                    <span class="separator">•</span>
+                    <a href="https://github.com/sidkaria/Peninsula-Updates">Updates</a>
+                    <span class="separator">•</span>
+                    <a href="appcast.xml">Release Feed</a>
+                </p>
+                <p class="legal">Secure payments processed by Lemon Squeezy</p>
+            </div>
         </footer>
     </div>
 
-    <script>
-        // Fetch latest version from appcast.xml
-        fetch('appcast.xml')
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(data, 'text/xml');
-                const items = xml.querySelectorAll('item');
-                if (items.length > 0) {
-                    const latestTitle = items[0].querySelector('title').textContent;
-                    const version = latestTitle.replace('Peninsula ', '');
-                    document.getElementById('latest-version').textContent = version;
-                }
-            })
-            .catch(() => {
-                document.getElementById('latest-version').textContent = '1.0.4';
-            });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
