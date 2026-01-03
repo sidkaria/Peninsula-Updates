@@ -93,21 +93,41 @@ function fetchLatestVersion() {
     if (!versionElement) return;
 
     fetch('appcast.xml')
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to fetch appcast');
+            return response.text();
+        })
         .then(data => {
             const parser = new DOMParser();
             const xml = parser.parseFromString(data, 'text/xml');
-            const items = xml.querySelectorAll('item');
 
-            if (items.length > 0) {
-                const latestTitle = items[0].querySelector('title').textContent;
-                const version = latestTitle.replace('Peninsula ', '');
+            // Check for XML parsing errors
+            const parserError = xml.querySelector('parsererror');
+            if (parserError) throw new Error('XML parsing failed');
+
+            // Get first item (latest version)
+            const items = xml.querySelectorAll('item');
+            if (items.length === 0) throw new Error('No versions found');
+
+            // Try to get version from sparkle:shortVersionString, fallback to title
+            const latestItem = items[0];
+            let version = latestItem.querySelector('shortVersionString')?.textContent;
+
+            if (!version) {
+                const title = latestItem.querySelector('title')?.textContent;
+                version = title ? title.replace('Peninsula ', '') : null;
+            }
+
+            if (version) {
                 versionElement.textContent = version;
+            } else {
+                throw new Error('Version not found in appcast');
             }
         })
         .catch(error => {
             console.error('Error fetching version:', error);
-            versionElement.textContent = '1.0.4';
+            // Fallback to hardcoded version
+            versionElement.textContent = '1.0.6';
         });
 }
 
