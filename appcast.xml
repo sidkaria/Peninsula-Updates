@@ -8,6 +8,25 @@
 
         <!-- GitHub Actions will automatically insert new releases here -->
     <item>
+        <title>Peninsula 1.0.7</title>
+        <pubDate>Sat, 03 Jan 2026 19:34:36 +0000</pubDate>
+        <sparkle:version>1.0.7</sparkle:version>
+        <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+        <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+        <description><![CDATA[
+            <h2>What's New in 1.0.7</h2>
+            <ul>
+                <li>Bump version to 1.0.7</li> 
+            </ul>
+        ]]></description>
+        <enclosure
+            url="https://github.com/sidkaria/Peninsula-Updates/releases/download/v1.0.7/Peninsula.dmg"
+            sparkle:edSignature="3cbTYPcy7BIWf5v4zwGGpHknd+Ji2rSW0pu3h56MM6LWfDNaCeKVgGSQu1BHwqZkVsrebu2t0uV0HqqXs5A5CQ=="
+            length="3706229"
+            type="application/octet-stream"
+        />
+    </item>
+    <item>
         <title>Peninsula 1.0.6</title>
         <pubDate>Sat, 03 Jan 2026 19:22:46 +0000</pubDate>
         <sparkle:version>1.0.6</sparkle:version>
